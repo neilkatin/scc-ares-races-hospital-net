@@ -146,7 +146,7 @@
       (expand the <code>Assets</code> section to see the files)]</span>
     </p>
 
-{% macro hblock(name, packetname) -%}
+{% macro hblock(name, packetname, three_line=false) -%}
         <tr class='top'>
           <td class='name'>{{ name }}</td>
           <td class='gap'></td>
@@ -161,6 +161,22 @@
           <td class='box_yn'></td>
           <td class='box_yn'></td>
         </tr>
+        {% if three_line == true -%}
+        <tr class='top'>
+          <td class='pname'>&nbsp;</td>
+          <td class='gap'></td>
+          <td class='box'></td>
+          <td class='box'></td>
+          <td class='gap'></td>
+          <td class='box'></td>
+          <td class='box'></td>
+          <td class='box_yn'></td>
+          <td class='box_yn'></td>
+          <td class='box_yn'></td>
+          <td class='box_yn'></td>
+          <td class='box_yn'></td>
+        </tr>
+        {%- endif %}
         <tr class='bottom'>
           <td class='pname'>{{ packetname }}</td>
           <td class='gap'></td>
@@ -198,7 +214,7 @@
       {{ hblock('MHJOC', 'HOSDOC') }}
       {{ hblock('RED CROSS', 'ARCEOC') }}
       {{ hblock('El Camino LG', 'HOSECL') }}
-      {{ hblock('El Camino MTV', 'HOSECM') }}
+      {{ hblock('El Camino MTV', 'HOSECM', true) }}
       {{ hblock('Good Sam', 'HOSGSH') }}
       {{ hblock('Kaiser SJC', 'HOSKSH') }}
       {{ hblock('Kaiser SCL', 'HOSKSC') }}

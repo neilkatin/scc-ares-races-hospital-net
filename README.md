@@ -22,3 +22,5 @@ make                            # expand the script template
 The generated file uses the ```writing-mode: sideways-lr;``` CSS command; this seems to only work on Firefox,
 so to generate the PDF document print using that browser.
 
+When printing use custom margins, with 0.5" for left, top, right and 0.25 for bottom.
+
